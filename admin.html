@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDU TEST | Admin Panel</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+<div class="dashboard-layout">
+<aside class="sidebar">
+    <div class="sidebar-logo">
+        <span class="logo-icon">E</span> EDU TEST
+    </div>
+    <div class="menu-title">ADMINISTRATOR</div>
+    <nav class="sidebar-menu">
+        <a href="admin.html" class="menu-link active">▦ Boshqaruv</a>
+        <a href="#users" class="menu-link">👥 O‘quvchilar</a>
+        <a href="#teachers" class="menu-link">👨‍🏫 Ustozlar</a>
+        <a href="#tests" class="menu-link">📝 Testlar</a>
+        <a href="ranking.html" class="menu-link">🏆 Reyting</a>
+    </nav>
+    <div class="sidebar-bottom">
+        <button class="logout-btn" id="adminLogout">↪ Chiqish</button>
+    </div>
+</aside>
+
+<main class="dashboard-main">
+<header class="dashboard-header">
+    <div>
+        <h2>Admin boshqaruv paneli</h2>
+        <p>EDU TEST platformasini boshqaring</p>
+    </div>
+    <div class="header-user">
+        <div class="user-avatar">A</div>
+        <div><strong>Administrator</strong><small>Admin</small></div>
+    </div>
+</header>
+
+<section class="welcome-banner">
+    <div>
+        <span class="welcome-label">ADMIN CONTROL CENTER</span>
+        <h1>Xush kelibsiz, Admin!</h1>
+        <p>Platformaning umumiy holatini shu yerdan kuzating.</p>
+    </div>
+    <div class="banner-illustration">🛡️</div>
+</section>
+
+<section class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-icon blue">👥</div>
+        <div><p>O‘quvchilar</p><h2 id="adminStudents">0</h2><small>Jami foydalanuvchilar</small></div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon green">👨‍🏫</div>
+        <div><p>Ustozlar</p><h2 id="adminTeachers">0</h2><small>Jami ustozlar</small></div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon purple">📝</div>
+        <div><p>Testlar</p><h2 id="adminTests">0</h2><small>Yaratilgan testlar</small></div>
+    </div>
+</section>
+
+<section class="admin-section" id="users">
+    <div class="section-heading">
+        <div><h2>Foydalanuvchilar</h2><p>Platformadagi foydalanuvchilar ro‘yxati</p></div>
+    </div>
+
+    <div class="admin-toolbar">
+        <input type="search" id="userSearch" placeholder="Ism bo‘yicha qidirish...">
+        <button class="admin-add-btn" id="addTeacher">+ Ustoz qo‘shish</button>
+    </div>
+
+    <div class="admin-table-wrap">
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Ism</th>
+                    <th>Rol</th>
+                    <th>Holat</th>
+                    <th>Amal</th>
+                </tr>
+            </thead>
+            <tbody id="usersTable">
+                <tr><td colspan="4">Ma'lumotlar yuklanmoqda...</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="admin-section" id="teachers">
+    <h2>Ustozlarni boshqarish</h2>
+    <p class="admin-description">Ustozlar hisoblarini keyingi bosqichda boshqarishingiz mumkin.</p>
+</section>
+
+<section class="admin-section" id="tests">
+    <h2>Testlar boshqaruvi</h2>
+    <p class="admin-description">Testlarni nazorat qilish va boshqarish.</p>
+</section>
+
+<footer class="dashboard-footer">© 2026 EDU TEST ADMIN PANEL</footer>
+</main>
+</div>
+
+<script type="module" src="js/admin.js"></script>
+</body>
+</html>

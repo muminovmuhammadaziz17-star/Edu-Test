@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDU TEST | Test ishlash</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+<main class="dashboard-main" style="margin:auto;width:100%;max-width:1000px">
+
+<header class="dashboard-header">
+    <div>
+        <h2>📝 EDU TEST</h2>
+        <p>Bilimingizni sinab ko‘ring</p>
+    </div>
+    <a href="dashboard.html" class="banner-btn">Kabinetga qaytish</a>
+</header>
+
+<section class="admin-section" id="testSelection">
+    <h2>Mavjud testlar</h2>
+    <p class="admin-description">O‘zingizga kerakli testni tanlang.</p>
+    <div id="availableTests" class="teacher-test-list"></div>
+</section>
+
+<section class="admin-section hidden" id="quizSection">
+    <div class="section-heading">
+        <div>
+            <h2 id="quizTitle">Test</h2>
+            <p id="quizInfo"></p>
+        </div>
+        <h2 id="timer">00:00</h2>
+    </div>
+
+    <div class="quiz-progress">
+        <div id="progressBar"></div>
+    </div>
+
+    <div id="questionArea"></div>
+
+    <div class="quiz-navigation">
+        <button id="previousBtn" class="admin-add-btn">← Oldingi</button>
+        <span id="questionNumber"></span>
+        <button id="nextBtn" class="admin-add-btn">Keyingi →</button>
+        <button id="finishBtn" class="primary-btn">Testni yakunlash</button>
+    </div>
+</section>
+
+<section class="admin-section hidden" id="resultSection">
+    <div class="result-content">
+        <div style="font-size:60px">🏆</div>
+        <h1>Test yakunlandi!</h1>
+        <h2 id="resultScore">0%</h2>
+        <p id="resultDetails"></p>
+        <button class="primary-btn" onclick="location.href='dashboard.html'">
+            Kabinetga qaytish
+        </button>
+        <a href="ranking.html" class="result-ranking">🏆 Reytingni ko‘rish</a>
+    </div>
+</section>
+
+</main>
+<script type="module" src="js/test.js"></script>
+</body>
+</html>

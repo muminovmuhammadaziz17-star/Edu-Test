@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDU TEST | O‘quvchi kabineti</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-logo">
+                <span class="logo-icon">E</span>
+                <span>EDU TEST</span>
+            </div>
+
+            <div class="menu-title">ASOSIY MENYU</div>
+
+            <nav class="sidebar-menu">
+                <a href="dashboard.html" class="menu-link active">
+                    <span>▦</span> Bosh sahifa
+                </a>
+
+                <a href="test.html" class="menu-link">
+                    <span>📝</span> Testlar
+                </a>
+
+                <a href="ranking.html" class="menu-link">
+                    <span>🏆</span> Reyting
+                </a>
+
+                <a href="#" class="menu-link" id="resultsLink">
+                    <span>📊</span> Natijalarim
+                </a>
+
+                <a href="#" class="menu-link" id="profileLink">
+                    <span>👤</span> Profilim
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="help-card">
+                    <div class="help-icon">💡</div>
+                    <h4>Bilimingizni oshiring!</h4>
+                    <p>Har kuni yangi testlar yeching.</p>
+                </div>
+
+                <button class="logout-btn" id="logoutBtn">
+                    ↪ Tizimdan chiqish
+                </button>
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="dashboard-main">
+
+            <header class="dashboard-header">
+
+                <button class="mobile-menu" id="mobileMenu">☰</button>
+
+                <div>
+                    <h2>O‘quvchi kabineti</h2>
+                    <p>Bilim sari yana bir qadam!</p>
+                </div>
+
+                <div class="header-user">
+                    <div class="user-avatar">O</div>
+                    <div>
+                        <strong id="headerName">O‘quvchi</strong>
+                        <small>O‘quvchi</small>
+                    </div>
+                </div>
+
+            </header>
+
+            <section class="welcome-banner">
+                <div>
+                    <span class="welcome-label">EDU TEST PLATFORMASI</span>
+                    <h1>Salom, <span id="welcomeName">O‘quvchi</span>!</h1>
+                    <p>Bugun ham bilimingizni sinab ko‘rishga tayyormisiz?</p>
+                    <a href="test.html" class="banner-btn">Test ishlash →</a>
+                </div>
+
+                <div class="banner-illustration">🎓</div>
+            </section>
+
+            <!-- STATISTICS -->
+            <section class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon blue">🏆</div>
+                    <div>
+                        <p>Umumiy ball</p>
+                        <h2 id="totalPoints">0</h2>
+                        <small>To‘plangan ballar</small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">📝</div>
+                    <div>
+                        <p>Yechilgan testlar</p>
+                        <h2 id="completedTests">0</h2>
+                        <small>Jami testlar</small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">📈</div>
+                    <div>
+                        <p>O‘rtacha natija</p>
+                        <h2 id="averageScore">0%</h2>
+                        <small>Testlar bo‘yicha</small>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- SUBJECTS -->
+            <section class="dashboard-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Fanlar</h2>
+                        <p>O‘zingizga kerakli fanni tanlang</p>
+                    </div>
+                    <span class="section-tag">Barcha fanlar</span>
+                </div>
+
+                <div class="subjects-grid">
+
+                    <div class="subject-card">
+                        <div class="subject-icon">📐</div>
+                        <h3>Matematika</h3>
+                        <p>Mantiqiy fikrlash va hisoblash</p>
+                        <a href="test.html?subject=matematika">Testlarni ko‘rish →</a>
+                    </div>
+
+                    <div class="subject-card">
+                        <div class="subject-icon">⚛️</div>
+                        <h3>Fizika</h3>
+                        <p>Tabiat qonunlarini o‘rganish</p>
+                        <a href="test.html?subject=fizika">Testlarni ko‘rish →</a>
+                    </div>
+
+                    <div class="subject-card">
+                        <div class="subject-icon">💻</div>
+                        <h3>Informatika</h3>
+                        <p>IT va dasturlash bilimlari</p>
+                        <a href="test.html?subject=informatika">Testlarni ko‘rish →</a>
+                    </div>
+
+                    <div class="subject-card">
+                        <div class="subject-icon">🌍</div>
+                        <h3>Tarix</h3>
+                        <p>Tarixiy bilimlarni sinash</p>
+                        <a href="test.html?subject=tarix">Testlarni ko‘rish →</a>
+                    </div>
+
+                    <div class="subject-card">
+                        <div class="subject-icon">🧪</div>
+                        <h3>Kimyo</h3>
+                        <p>Moddalar va reaksiyalar</p>
+                        <a href="test.html?subject=kimyo">Testlarni ko‘rish →</a>
+                    </div>
+
+                    <div class="subject-card">
+                        <div class="subject-icon">📚</div>
+                        <h3>Ona tili</h3>
+                        <p>Til va grammatika bilimlari</p>
+                        <a href="test.html?subject=ona-tili">Testlarni ko‘rish →</a>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- BOTTOM -->
+            <section class="dashboard-bottom">
+
+                <div class="activity-card">
+                    <h2>Oxirgi faoliyat</h2>
+                    <div id="recentActivity" class="empty-activity">
+                        <span>📋</span>
+                        <p>Hozircha test ishlamagansiz.</p>
+                        <small>Birinchi testingizni boshlang!</small>
+                    </div>
+                </div>
+
+                <div class="ranking-card">
+                    <div class="ranking-icon">🏆</div>
+                    <h2>Reytingda qatnashing!</h2>
+                    <p>Boshqa o‘quvchilar bilan natijalaringizni solishtiring.</p>
+                    <a href="ranking.html">Reytingni ko‘rish →</a>
+                </div>
+
+            </section>
+
+            <footer class="dashboard-footer">
+                © 2026 EDU TEST. Barcha huquqlar himoyalangan.
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script type="module" src="js/dashboard.js"></script>
+
+</body>
+</html>

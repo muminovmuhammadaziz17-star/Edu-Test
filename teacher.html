@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDU TEST | Ustoz paneli</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+<div class="dashboard-layout">
+
+<aside class="sidebar">
+    <div class="sidebar-logo">
+        <span class="logo-icon">E</span> EDU TEST
+    </div>
+
+    <div class="menu-title">USTOZ PANELI</div>
+
+    <nav class="sidebar-menu">
+        <a href="teacher.html" class="menu-link active">▦ Bosh sahifa</a>
+        <a href="#createTest" class="menu-link">➕ Test yaratish</a>
+        <a href="#myTests" class="menu-link">📝 Mening testlarim</a>
+        <a href="ranking.html" class="menu-link">🏆 Reyting</a>
+        <a href="dashboard.html" class="menu-link">👤 O‘quvchi kabineti</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+        <button class="logout-btn" id="teacherLogout">↪ Chiqish</button>
+    </div>
+</aside>
+
+<main class="dashboard-main">
+
+<header class="dashboard-header">
+    <div>
+        <h2>Ustoz boshqaruv paneli</h2>
+        <p>O‘quvchilar uchun testlar yarating</p>
+    </div>
+    <div class="header-user">
+        <div class="user-avatar">U</div>
+        <div><strong>Ustoz</strong><small>Teacher</small></div>
+    </div>
+</header>
+
+<section class="welcome-banner">
+    <div>
+        <span class="welcome-label">TEACHER CONTROL CENTER</span>
+        <h1>Salom, ustoz!</h1>
+        <p>O‘quvchilaringiz bilimini tekshirish uchun test yarating.</p>
+        <a href="#createTest" class="banner-btn">Test yaratish +</a>
+    </div>
+    <div class="banner-illustration">👨‍🏫</div>
+</section>
+
+<section class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-icon blue">📝</div>
+        <div><p>Yaratilgan testlar</p><h2 id="teacherTestCount">0</h2><small>Jami testlar</small></div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon green">❓</div>
+        <div><p>Savollar</p><h2 id="teacherQuestionCount">0</h2><small>Jami savollar</small></div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon purple">👥</div>
+        <div><p>Ishtirokchilar</p><h2 id="teacherStudents">0</h2><small>Test yechganlar</small></div>
+    </div>
+</section>
+
+<!-- TEST YARATISH -->
+<section class="admin-section" id="createTest">
+
+    <div class="section-heading">
+        <div>
+            <h2>➕ Yangi test yaratish</h2>
+            <p>Test ma'lumotlari va savollarni kiriting</p>
+        </div>
+    </div>
+
+    <form id="testForm">
+
+        <div class="teacher-form-grid">
+
+            <div class="form-group">
+                <label>Test nomi</label>
+                <input id="testTitle" type="text" placeholder="Masalan: Algebra 8-sinf" required>
+            </div>
+
+            <div class="form-group">
+                <label>Fan</label>
+                <select id="testSubject" required>
+                    <option value="">Fanni tanlang</option>
+                    <option>Matematika</option>
+                    <option>Fizika</option>
+                    <option>Informatika</option>
+                    <option>Tarix</option>
+                    <option>Kimyo</option>
+                    <option>Biologiya</option>
+                    <option>Ona tili</option>
+                    <option>Ingliz tili</option>
+                    <option>Geografiya</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Sinf</label>
+                <select id="testClass" required>
+                    <option value="">Sinfni tanlang</option>
+                    <option>5-sinf</option>
+                    <option>6-sinf</option>
+                    <option>7-sinf</option>
+                    <option>8-sinf</option>
+                    <option>9-sinf</option>
+                    <option>10-sinf</option>
+                    <option>11-sinf</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Test vaqti (daqiqa)</label>
+                <input id="testTime" type="number" min="1" max="180" value="30" required>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label>Test haqida</label>
+            <input id="testDescription" type="text" placeholder="Test haqida qisqacha ma'lumot">
+        </div>
+
+        <div class="question-header">
+            <h3>Savollar</h3>
+            <button type="button" class="admin-add-btn" id="addQuestion">
+                + Savol qo‘shish
+            </button>
+        </div>
+
+        <div id="questionsContainer"></div>
+
+        <button type="submit" class="primary-btn">
+            Testni saqlash
+        </button>
+
+        <p id="teacherMessage" class="message"></p>
+
+    </form>
+</section>
+
+<!-- TESTLAR -->
+<section class="admin-section" id="myTests">
+    <div class="section-heading">
+        <div>
+            <h2>Mening testlarim</h2>
+            <p>Yaratilgan testlar ro‘yxati</p>
+        </div>
+    </div>
+
+    <div id="teacherTestList" class="teacher-test-list">
+        <p class="admin-description">Hozircha testlar mavjud emas.</p>
+    </div>
+</section>
+
+<footer class="dashboard-footer">
+    © 2026 EDU TEST | TEACHER PANEL
+</footer>
+
+</main>
+</div>
+
+<script type="module" src="js/teacher.js"></script>
+</body>
+</html>
